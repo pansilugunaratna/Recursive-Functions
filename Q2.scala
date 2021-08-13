@@ -2,7 +2,7 @@
 
 object sequence {
     //check whether prime and return boolean value
-    def prime(n:Int, i:Int) : Boolean = { 
+    def primeSeq(n:Int, i:Int) : Boolean = { 
 
         if(n <= 2){
             if(n==2)
@@ -16,7 +16,7 @@ object sequence {
         if(i*i > n){
             return true;
         }
-        return prime(n, i+1)  
+        return primeSeq(n, i+1)  
        
     }
     def main(args: Array[String]): Unit = {
@@ -24,7 +24,7 @@ object sequence {
         
         println("Prime numbers : ");
         for(i <- 1 to n){
-            if(prime(i,2)){
+            if(primeSeq(i,2)){
                  print(i);
                  print(" ");
             }
